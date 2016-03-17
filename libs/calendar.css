@@ -1,0 +1,47 @@
+.schedulerize table {
+  width: 99%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.schedulerize table thead tr.column-header-list th.column-header {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.schedulerize table thead tr.column-header-list th.column-header.blank {
+  width: 80px;
+}
+.schedulerize table tbody .time-row.first td {
+  border-top: 1px solid #ccc;
+}
+.schedulerize table tbody .time-row.first td:first-child {
+  border-top: none;
+}
+.schedulerize table tbody .time-row.first td.time-header {
+  padding-left: 0;
+  vertical-align: top;
+}
+.schedulerize table tbody .time-row.first td.time-header .time-text {
+  margin-top: -10px;
+  text-align: right;
+  padding-right: 15px;
+}
+.schedulerize table tbody .time-row td {
+  padding: 1px 10px 0px 10px;
+}
+.schedulerize table tbody .time-row td .event {
+  background-color: #ccc;
+  height: 30px;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.schedulerize table tbody .time-row td .event.continuation {
+  height: 100%;
+}
+.schedulerize table tbody .time-row td .event.blank.free {
+  background-color: transparent;
+  border-top: none;
+}
+.schedulerize table tbody .time-row td .event.blank:before {
+  content: '\00a0';
+}
