@@ -3,6 +3,10 @@ angular.module('app', ['schedulerize'])
 .controller('SamplePage', function($scope, $locale) {
     $scope.data = {};
     
+    $scope.onSelect = function(record) {
+        console.log(record);    
+    }
+    
     $scope.AddData = function(){
         $scope.data = {
             verticals: [

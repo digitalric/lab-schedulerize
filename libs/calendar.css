@@ -34,6 +34,7 @@
   height: 30px;
   overflow: auto;
   word-wrap: break-word;
+  cursor: pointer;
 }
 .schedulerize table tbody .time-row td .event.continuation {
   height: 100%;
@@ -41,6 +42,7 @@
 .schedulerize table tbody .time-row td .event.blank.free {
   background-color: transparent;
   border-top: none;
+  cursor: default;
 }
 .schedulerize table tbody .time-row td .event.blank:before {
   content: '\00a0';

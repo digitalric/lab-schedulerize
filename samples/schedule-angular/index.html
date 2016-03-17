@@ -18,7 +18,7 @@
 
 <body ng-controller="SamplePage">
     <button id="addData" ng-click="AddData()">Add Data</button>
-    <schedulerize data="data"></schedulerize>
+    <schedulerize data="data" on-select="onSelect(record)"></schedulerize>
     
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/jquery-ui/jquery-ui.js"></script>

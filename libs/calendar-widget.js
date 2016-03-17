@@ -14,6 +14,8 @@
         },
         
         _generateEvent: function(event, container, timeOfTheDay) {
+            var widget = this;
+            
             //prepare a cell for that item at that time
             var eventContent = $("<div>", {"class": "event"});
             var hideCell = true;
@@ -56,6 +58,9 @@
                 container.css({"display" : "none"});
             }
             
+            eventContent.on('click', function() {
+                widget._trigger("select", null, event);
+            })
             return eventContent;        
         },
         
