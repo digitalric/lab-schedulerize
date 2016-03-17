@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Calendar - Schedule</title>
+    <meta name="description" content="Calendar POC">
+    <meta name="author" content="Me">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/libs/calendar.css">
+    <link rel="stylesheet" href="/samples/schedule-js/schedule.css">
+    <link rel="stylesheet" href="/samples/common.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <button id="addData">Add Data</button>
+    <div id="test" style=""></div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script src="/samples/sprintf.js"></script>
+    
+    <script src="/libs/calendar-widget.js"></script>
+    <script type='text/javascript'>
+        $(function(){
+            var data = {
+                verticals: [
+                    {
+                        title: "SYD A",
+                        events: [
+                            {
+                                id: "event1",
+                                patientName: "SMITH, John",
+                                type: "OPU",
+                                start: "2016-03-17T09:00",
+                                end: "2016-03-17T09:15",
+                                content: "%(patientName)s | %(type)s",
+                                class: "OPU"    
+                            },
+                            {
+                                id: "event2",
+                                title: "do something again",
+                                start: "2016-03-17T15:00",
+                                end: "2016-03-17T16:30",
+                                content: "%(title)s",
+                                class: "BigEvent"  
+                            }
+                        ]
+                    },
+                    {
+                        title: "SYD B",
+                        events: [
+                            {
+                                id: "event3",
+                                patientName: "SMITH, John",
+                                type: "OPU",
+                                start: "2016-03-17T09:00",
+                                end: "2016-03-17T09:45",
+                                content: "%(patientName)s | %(type)s",
+                                class: "OPU"    
+                            },
+                            {
+                                id: "event4",
+                                title: "do something again",
+                                start: "2016-03-17T09:45",
+                                end: "2016-03-17T10:00",
+                                content: "%(title)s",
+                                class: "BigEvent"  
+                            }
+                        ]
+                    },
+                    {
+                        title: "SYD C",
+                        events: [
+                            {
+                                id: "event5",
+                                title: "do something 3",
+                                start: "2016-03-17T10:00",
+                                end: "2016-03-17T11:00",
+                                content: "%(title)s"      
+                            }
+                        ]
+                    },
+                    {
+                        title: "SYD D",
+                        events: [
+                            {
+                                id: "event6",
+                                title: "do something 4",
+                                start: "2016-03-17T10:30",
+                                end: "2016-03-17T10:45",
+                                content: "%(title)s",
+                                class: "blue"      
+                            },
+                            {
+                                id: "event7",
+                                title: "do something 4a",
+                                start: "2016-03-17T10:45",
+                                end: "2016-03-17T11:00",
+                                content: "%(title)s",
+                                class: "blue"      
+                            }
+
+                        ]
+                    }
+                ]                
+            };
+            
+            $("#test").schedulerize();
+            
+            $("#addData").click(function() {
+                $("#test").schedulerize("option", { data: data});
+            });
+        });
+    </script>
+    
+</body>
+</html>

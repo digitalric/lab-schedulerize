@@ -1,0 +1,82 @@
+.schedulerize
+{
+    table {
+        width:99%;
+        table-layout: fixed;
+        border-collapse: collapse;
+            
+        thead {
+            tr.column-header-list
+            {
+                th.column-header 
+                {
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    text-align: center;
+                                            
+                    &.blank {
+                        width: 80px;
+                    }              
+                }
+            }
+        }
+        
+        tbody {
+            
+            .time-row {
+                
+                &.first {
+
+                    td {
+                        border-top: 1px solid #ccc;
+                        
+                        &:first-child {
+                            border-top: none;
+                        }
+                        
+                        &.time-header {
+                            padding-left: 0;
+                            vertical-align: top;
+                            
+                            .time-text {
+                                margin-top: -10px;
+                                text-align: right;
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+                
+                td {
+                    padding: 1px 10px 0px 10px;
+                    
+                                
+                    .event {
+                        background-color: #ccc;
+                        height: 30px;
+                        overflow:auto;
+                        word-wrap: break-word;
+                        
+                        &.continuation {
+                            height:100%; 
+                        }
+                        
+                        &.blank {
+                            
+                            &.free {
+                                background-color: transparent;
+                                border-top: none;
+                            }
+                            
+                            &:before {
+                                content: '\00a0';
+                            }
+                        }
+                    }
+                }
+            }
+        }            
+    }
+        
+        
+}

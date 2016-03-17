@@ -1,0 +1,22 @@
+.event {
+    border-top:0;
+    border-bottom:0;
+    border-left:5px solid transparent;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.event.OPU {
+    border-left-color:red;
+    background-color:pink !important;
+}
+
+.event.BigEvent {
+    border-left-color: darkgray;
+    background-color: lightgray;
+}
+
+.event.blue {
+    border-left-color:blue;
+    background-color:aliceblue !important;
+}

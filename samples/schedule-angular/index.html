@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+
+    <title>Calendar - Schedule</title>
+    <meta name="description" content="Calendar POC">
+    <meta name="author" content="Me">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/libs/calendar.css">
+    <link rel="stylesheet" href="/samples/schedule-js/schedule.css">
+    <link rel="stylesheet" href="/samples/common.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="SamplePage">
+    <button id="addData" ng-click="AddData()">Add Data</button>
+    <schedulerize data="data"></schedulerize>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="/samples/sprintf.js"></script>
+    <script src="/libs/calendar-widget.js"></script>
+    <script src="/libs/calendar-angular.js"></script>
+    <script src="schedule-angular.js"></script>
+</body>
+</html>
