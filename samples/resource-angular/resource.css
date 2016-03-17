@@ -1,0 +1,26 @@
+.schedulerize table tbody .time-row td {
+    padding: 0px 10px;
+}
+
+.schedulerize table tbody .time-row td .event {
+    height:20px;
+}
+
+.event.blank.free {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+}
+
+.event {
+    padding: 5px;
+}
+
+.event.exception {
+    background-color:rgba(255, 0, 0, 0.3) !important;
+    color: red;
+}
+
+.event.availability {
+    background-color:rgba(0, 0, 255, 0.3) !important;
+    color: blue;
+    
+}
