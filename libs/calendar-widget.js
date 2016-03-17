@@ -118,7 +118,7 @@
                 //loop through the verticals to generate event items
                 $.each(options.data.verticals, function(index, value) {
                     //prepare event container 
-                    var eventContainer = $("<td>", {"id": scheduleRun.valueOf()});
+                    var eventContainer = $("<td>", {"id": scheduleRun.valueOf(), "class": "event-container"});
                     
                     //check if there is any event that starts at that block or the block falls inside a bigger range
                     var event = _.find(value.events, function (e){
