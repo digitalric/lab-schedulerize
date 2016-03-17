@@ -1,7 +1,7 @@
 {
   "name": "lab-schedulerize",
   "description": "Scheduler control",
-  "main": : [
+  "main": [
     "libs/calendar-widget.js",
 	"libs/calendar-angular.js",
 	"libs/calendar.css"
