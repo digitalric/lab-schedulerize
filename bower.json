@@ -4,6 +4,7 @@
   "main": : [
     "libs/calendar-widget.js",
 	"libs/calendar-angular.js",
+	"libs/calendar.css"
   ]
   "license": "MIT",
   "homepage": "",
