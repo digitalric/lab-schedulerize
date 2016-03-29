@@ -9,81 +9,81 @@ angular.module('app', ['schedulerize'])
     
     $scope.AddData = function(){
         $scope.data = {
-            verticals: [
+            Verticals: [
                 {
-                    title: "SYD A",
-                    events: [
+                    Title: "SYD A",
+                    Events: [
                         {
-                            id: "event1",
-                            patientName: "SMITH, John",
-                            type: "OPU",
-                            start: "2016-03-17T09:00",
-                            end: "2016-03-17T09:15",
-                            content: "%(patientName)s | %(type)s",
-                            class: "OPU"    
+                            Id: "event1",
+                            PatientName: "SMITH, John",
+                            Type: "OPU",
+                            Start: "2016-03-30T09:00",
+                            End: "2016-03-30T09:15",
+                            Content: "%(PatientName)s | %(Type)s",
+                            Class: "OPU"    
                         },
                         {
-                            id: "event2",
-                            title: "do something again",
-                            start: "2016-03-17T15:00",
-                            end: "2016-03-17T16:30",
-                            content: "%(title)s",
-                            class: "BigEvent"  
+                            Id: "event2",
+                            Title: "do something again",
+                            Start: "2016-03-30T15:00",
+                            End: "2016-03-30T16:30",
+                            Content: "%(Title)s",
+                            Class: "BigEvent"  
                         }
                     ]
                 },
                 {
-                    title: "SYD B",
-                    events: [
+                    Title: "SYD B",
+                    Events: [
                         {
-                            id: "event3",
-                            patientName: "SMITH, John",
-                            type: "OPU",
-                            start: "2016-03-17T09:00",
-                            end: "2016-03-17T09:45",
-                            content: "%(patientName)s | %(type)s",
-                            class: "OPU"    
+                            Id: "event3",
+                            PatientName: "SMITH, John",
+                            Type: "OPU",
+                            Start: "2016-03-30T09:00",
+                            End: "2016-03-30T09:45",
+                            Content: "%(PatientName)s | %(Type)s",
+                            Class: "OPU"    
                         },
                         {
-                            id: "event4",
-                            title: "do something again",
-                            start: "2016-03-17T09:45",
-                            end: "2016-03-17T10:00",
-                            content: "%(title)s",
-                            class: "BigEvent"  
+                            Id: "event4",
+                            Title: "do something again",
+                            Start: "2016-03-30T09:45",
+                            End: "2016-03-30T10:00",
+                            Content: "%(Title)s",
+                            Class: "BigEvent"  
                         }
                     ]
                 },
                 {
-                    title: "SYD C",
-                    events: [
+                    Title: "SYD C",
+                    Events: [
                         {
-                            id: "event5",
-                            title: "do something 3",
-                            start: "2016-03-17T10:00",
-                            end: "2016-03-17T11:00",
-                            content: "%(title)s"      
+                            Id: "event5",
+                            Title: "do something 3",
+                            Start: "2016-03-30T10:00",
+                            End: "2016-03-30T11:00",
+                            Content: "%(Title)s"      
                         }
                     ]
                 },
                 {
-                    title: "SYD D",
-                    events: [
+                    Title: "SYD D",
+                    Events: [
                         {
-                            id: "event6",
-                            title: "do something 4",
-                            start: "2016-03-17T10:30",
-                            end: "2016-03-17T10:45",
-                            content: "%(title)s",
-                            class: "blue"      
+                            Id: "event6",
+                            Title: "do something 4",
+                            Start: "2016-03-30T10:30",
+                            End: "2016-03-30T10:45",
+                            Content: "%(Title)s",
+                            Class: "blue"      
                         },
                         {
-                            id: "event7",
-                            title: "do something 4a",
-                            start: "2016-03-17T10:45",
-                            end: "2016-03-17T11:00",
-                            content: "%(title)s",
-                            class: "blue"      
+                            Id: "event7",
+                            Title: "do something 4a",
+                            Start: "2016-03-30T10:45",
+                            End: "2016-03-30T11:00",
+                            Content: "%(Title)s",
+                            Class: "blue"      
                         }
 
                     ]

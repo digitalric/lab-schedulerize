@@ -1,15 +1,15 @@
 (function ( $ ) {
     $.widget("lab.schedulerize", {
         options : {
-            settings: {
-                timeRange: {
-                    start: 9, //09 00 or 9am
-                    end: 18, //18 00 or 6pm
-                    block: 10
+            Settings: {
+                TimeRange: {
+                    Start: 9, //09 00 or 9am
+                    End: 18, //18 00 or 6pm
+                    Block: 10
                 },
             },
-            data: {
-                verticals: []
+            Data: {
+                Verticals: []
             }
         },
         
@@ -22,22 +22,22 @@
             
             if (event) {
                 
-                var eventStart = moment(event.start);
-                var eventEnd = moment(event.end);
+                var eventStart = moment(event.Start);
+                var eventEnd = moment(event.End);
                 
                 //if this block is the start of an event
                 if (timeOfTheDay.isSame(eventStart)) {
                     //append custom class and Id
                     eventContent
-                        .addClass(event.class)
-                        .prop({"id": event.id});
+                        .addClass(event.Class)
+                        .prop({"id": event.Id});
                     //add the text
-                    eventContent.html(sprintf(event.content, event));
+                    eventContent.html(sprintf(event.Content, event));
                     
                     //get duration in minutes
                     var eventDurationInMins = eventEnd.diff(eventStart, "minutes");
                     //count number of rows to span across based on block
-                    var rowCount = eventDurationInMins / this.options.settings.timeRange.block;
+                    var rowCount = eventDurationInMins / this.options.Settings.TimeRange.Block;
                     
                     //when it needs more than 1 row
                     if (rowCount > 1) {
@@ -82,10 +82,10 @@
             columnHeaderList.append($("<th>", {"class": "column-header blank"}));
                 
             //add rest of the column headers
-            $.each(options.data.verticals, function(index, value){
+            $.each(options.Data.Verticals, function(index, value){
                 columnHeaderList.append(
                     $("<th>", {"class": "column-header"})
-                        .append($("<div>", {"class": "column-header-text", text: value.title})));
+                        .append($("<div>", {"class": "column-header-text", text: value.Title})));
             });
             
             tableContainer.append($("<thead>").append(columnHeaderList));
@@ -96,9 +96,9 @@
             //start of the day at midnight
             var startOfDay = moment().startOf('day');
             //compute start of the schedule
-            var startOfSchedule = moment(startOfDay).add(options.settings.timeRange.start, "hours");
+            var startOfSchedule = moment(startOfDay).add(options.Settings.TimeRange.Start, "hours");
             //compute end of the schedule, i.e. 1 hour after set end time
-            var endOfSchedule = moment(startOfDay).add(options.settings.timeRange.end + 1, "hours");
+            var endOfSchedule = moment(startOfDay).add(options.Settings.TimeRange.End + 1, "hours");
             //initialization for the loop
             var scheduleRun = moment(startOfSchedule);
             
@@ -121,13 +121,13 @@
                 timeRow.append(timeHeader);
 
                 //loop through the verticals to generate event items
-                $.each(options.data.verticals, function(index, value) {
+                $.each(options.Data.Verticals, function(index, value) {
                     //prepare event container 
                     var eventContainer = $("<td>", {"id": scheduleRun.valueOf(), "class": "event-container"});
                     
                     //check if there is any event that starts at that block or the block falls inside a bigger range
-                    var event = _.find(value.events, function (e){
-                        return scheduleRun.isSame(moment(e.start)) || (scheduleRun.isAfter(moment(e.start)) && scheduleRun.isBefore(moment(e.end)));
+                    var event = _.find(value.Events, function (e){
+                        return scheduleRun.isSame(moment(e.Start)) || (scheduleRun.isAfter(moment(e.Start)) && scheduleRun.isBefore(moment(e.End)));
                     });
                     
                     //create a cell for that item at that time
@@ -139,7 +139,7 @@
             
                 tableBodyContainer.append(timeRow);
                 //go to next block
-                scheduleRun.add(options.settings.timeRange.block, "minutes");
+                scheduleRun.add(options.Settings.TimeRange.Block, "minutes");
             }
             
             tableContainer.append(tableBodyContainer);

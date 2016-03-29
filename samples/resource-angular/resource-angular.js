@@ -1,119 +1,119 @@
 angular.module('app', ['schedulerize'])
  
 .controller('SamplePage', function($scope, $locale) {
-        $scope.settings = { timeRange: {
-                    start: 7, //09 00 or 9am
-                    end: 17, //18 00 or 6pm
-                    block: 30
+        $scope.settings = { TimeRange: {
+                    Start: 7, //09 00 or 9am
+                    End: 17, //18 00 or 6pm
+                    Block: 30
                 } 
         };
         $scope.data = {
-            verticals: [
+            Verticals: [
                 {
-                    title: "MON 15",
-                    events: [
+                    Title: "MON 15",
+                    Events: [
                         {
-                            id: "event1",
-                            title: "Exception 1",
-                            start: "2016-03-17T09:00",
-                            startTime: "09:00",
-                            end: "2016-03-17T11:00",
-                            endTime: "11:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "exception"    
+                            Id: "event1",
+                            Title: "Exception 1",
+                            Start: "2016-03-30T09:00",
+                            StartTime: "09:00",
+                            End: "2016-03-30T11:00",
+                            EndTime: "11:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "exception"    
                         },
                         {
-                            id: "event2",
-                            title: "Exception 1",
-                            start: "2016-03-17T13:00",
-                            startTime: "13:00",
-                            end: "2016-03-17T16:30",
-                            endTime: "16:30",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "exception"    
+                            Id: "event2",
+                            Title: "Exception 1",
+                            Start: "2016-03-30T13:00",
+                            StartTime: "13:00",
+                            End: "2016-03-30T16:30",
+                            EndTime: "16:30",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "exception"    
 
                         }
                     ]
                 },
                 {
-                    title: "TUE 16",
-                    events: [
+                    Title: "TUE 16",
+                    Events: [
                         {
-                            id: "event3",
-                            title: "Availability 1",
-                            start: "2016-03-17T09:00",
-                            startTime: "09:00",
-                            end: "2016-03-17T11:00",
-                            endTime: "11:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "availability"    
+                            Id: "event3",
+                            Title: "Availability 1",
+                            Start: "2016-03-30T09:00",
+                            StartTime: "09:00",
+                            End: "2016-03-30T11:00",
+                            EndTime: "11:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "availability"    
                         },
                         {
-                            id: "event4",
-                            title: "Availability 1",
-                            start: "2016-03-17T13:00",
-                            startTime: "13:00",
-                            end: "2016-03-17T14:00",
-                            endTime: "14:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "availability"    
+                            Id: "event4",
+                            Title: "Availability 1",
+                            Start: "2016-03-30T13:00",
+                            StartTime: "13:00",
+                            End: "2016-03-30T14:00",
+                            EndTime: "14:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "availability"    
 
                         }
                     ]
                 },
                 {
-                    title: "WED 17",
-                    events: [
+                    Title: "WED 17",
+                    Events: [
                         {
-                            id: "event5",
-                            title: "Availability 1",
-                            start: "2016-03-17T13:00",
-                            startTime: "13:00",
-                            end: "2016-03-17T14:00",
-                            endTime: "14:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "availability"    
+                            Id: "event5",
+                            Title: "Availability 1",
+                            Start: "2016-03-30T13:00",
+                            StartTime: "13:00",
+                            End: "2016-03-30T14:00",
+                            EndTime: "14:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "availability"    
 
                         }
                     ]
                 },
                 {
-                    title: "THU 18",
-                    events: [
+                    Title: "THU 18",
+                    Events: [
                         {
-                            id: "event6",
-                            title: "Availability 1",
-                            start: "2016-03-17T13:00",
-                            startTime: "13:00",
-                            end: "2016-03-17T14:00",
-                            endTime: "14:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "availability"    
+                            Id: "event6",
+                            Title: "Availability 1",
+                            Start: "2016-03-30T13:00",
+                            StartTime: "13:00",
+                            End: "2016-03-30T14:00",
+                            EndTime: "14:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "availability"    
 
                         }
                     ]
                 },
                 {
-                    title: "FRI 19",
-                    events: [
+                    Title: "FRI 19",
+                    Events: [
                         {
-                            id: "event7",
-                            title: "Exception 1",
-                            start: "2016-03-17T13:00",
-                            startTime: "13:00",
-                            end: "2016-03-17T14:00",
-                            endTime: "14:00",
-                            content: "%(title)s <br/> %(startTime)s - %(endTime)s",
-                            class: "exception"    
+                            Id: "event7",
+                            Title: "Exception 1",
+                            Start: "2016-03-30T13:00",
+                            StartTime: "13:00",
+                            End: "2016-03-30T14:00",
+                            EndTime: "14:00",
+                            Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
+                            Class: "exception"    
 
                         }
                     ]
                 },
                 {
-                    title: "SAT 20"
+                    Title: "SAT 20"
                 },
                 {
-                    title: "SUN 21"
+                    Title: "SUN 21"
                 }
                 
             ]                
