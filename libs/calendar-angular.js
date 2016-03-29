@@ -8,7 +8,7 @@ angular.module('schedulerize', [])
                 onSelect: "&" 
             },
             link: function(scope, element, attrs) {
-                $(element).schedulerize({data: scope.data, settings: scope.settings});
+                $(element).schedulerize({Data: scope.data, Settings: scope.settings});
                 
                 $(element).on('schedulerizeselect', function (event, record) {
                     if (scope.onSelect && typeof scope.onSelect === "function") {
@@ -18,7 +18,7 @@ angular.module('schedulerize', [])
                 
                 scope.$watch('data', function(newValue, oldValue) {
                    if (newValue != oldValue){
-                       $(element).schedulerize("option", {data: newValue});
+                       $(element).schedulerize("option", {Data: newValue});
                    } 
                 });
             },
