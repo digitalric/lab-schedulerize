@@ -7,6 +7,9 @@ angular.module('app', ['schedulerize'])
                     Block: 30
                 } 
         };
+        
+        var today = moment().startOf('day');
+        
         $scope.data = {
             Verticals: [
                 {
@@ -15,9 +18,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event1",
                             Title: "Exception 1",
-                            Start: "2016-03-30T09:00",
+                            Start: moment(today).hour(9).minute(0).toDate(),
                             StartTime: "09:00",
-                            End: "2016-03-30T11:00",
+                            End: moment(today).hour(11).minute(0).toDate(),
                             EndTime: "11:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "exception"    
@@ -25,9 +28,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event2",
                             Title: "Exception 1",
-                            Start: "2016-03-30T13:00",
+                            Start: moment(today).hour(13).toDate(),
                             StartTime: "13:00",
-                            End: "2016-03-30T16:30",
+                            End: moment(today).hour(16).minute(30).toDate(),
                             EndTime: "16:30",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "exception"    
@@ -41,9 +44,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event3",
                             Title: "Availability 1",
-                            Start: "2016-03-30T09:00",
+                            Start: moment(today).hour(9).toDate(),
                             StartTime: "09:00",
-                            End: "2016-03-30T11:00",
+                            End: moment(today).hour(11).toDate(),
                             EndTime: "11:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "availability"    
@@ -51,9 +54,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event4",
                             Title: "Availability 1",
-                            Start: "2016-03-30T13:00",
+                            Start: moment(today).hour(13).toDate(),
                             StartTime: "13:00",
-                            End: "2016-03-30T14:00",
+                            End: moment(today).hour(14).toDate(),
                             EndTime: "14:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "availability"    
@@ -67,9 +70,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event5",
                             Title: "Availability 1",
-                            Start: "2016-03-30T13:00",
+                            Start: moment(today).hour(13).toDate(),
                             StartTime: "13:00",
-                            End: "2016-03-30T14:00",
+                            End: moment(today).hour(14).toDate(),
                             EndTime: "14:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "availability"    
@@ -83,9 +86,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event6",
                             Title: "Availability 1",
-                            Start: "2016-03-30T13:00",
+                            Start: moment(today).hour(13).toDate(),
                             StartTime: "13:00",
-                            End: "2016-03-30T14:00",
+                            End: moment(today).hour(14).toDate(),
                             EndTime: "14:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "availability"    
@@ -99,9 +102,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event7",
                             Title: "Exception 1",
-                            Start: "2016-03-30T13:00",
+                            Start: moment(today).hour(13).toDate(),
                             StartTime: "13:00",
-                            End: "2016-03-30T14:00",
+                            End: moment(today).hour(14).toDate(),
                             EndTime: "14:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "exception"    

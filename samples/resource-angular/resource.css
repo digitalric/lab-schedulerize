@@ -1,25 +1,25 @@
-.schedulerize table tbody .time-row td {
+.schedulerize table tbody .schedulerize-time-row td {
     padding: 0px 10px;
 }
 
-.schedulerize table tbody .time-row td .event {
+.schedulerize table tbody .schedulerize-time-row td .schedulerize-event {
     height:20px;
 }
 
-.event.blank.free {
+.schedulerize-event.schedulerize-blank.schedulerize-free {
     background-color: rgba(100, 100, 100, 0.1) !important;
 }
 
-.event {
+.schedulerize-event {
     padding: 5px;
 }
 
-.event.exception {
+.schedulerize-event.exception {
     background-color:rgba(255, 0, 0, 0.3) !important;
     color: red;
 }
 
-.event.availability {
+.schedulerize-event.availability {
     background-color:rgba(0, 0, 255, 0.3) !important;
     color: blue;
     

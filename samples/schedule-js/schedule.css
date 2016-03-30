@@ -1,4 +1,4 @@
-.event {
+.schedulerize-event {
     border-top:0;
     border-bottom:0;
     border-left:5px solid transparent;
@@ -6,17 +6,17 @@
     line-height: 30px;
 }
 
-.event.OPU {
+.schedulerize-event.OPU {
     border-left-color:red;
     background-color:pink !important;
 }
 
-.event.BigEvent {
+.schedulerize-event.BigEvent {
     border-left-color: darkgray;
     background-color: lightgray;
 }
 
-.event.blue {
+.schedulerize-event.blue {
     border-left-color:blue;
     background-color:aliceblue !important;
 }
