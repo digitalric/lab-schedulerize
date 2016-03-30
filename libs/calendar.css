@@ -3,47 +3,47 @@
   table-layout: fixed;
   border-collapse: collapse;
 }
-.schedulerize table thead tr.column-header-list th.column-header {
+.schedulerize table thead tr.schedulerize-column-header-list th.schedulerize-column-header {
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
 }
-.schedulerize table thead tr.column-header-list th.column-header.blank {
+.schedulerize table thead tr.schedulerize-column-header-list th.schedulerize-column-header.schedulerize-blank {
   width: 80px;
 }
-.schedulerize table tbody .time-row.first td {
+.schedulerize table tbody .schedulerize-time-row.schedulerize-first td {
   border-top: 1px solid #ccc;
 }
-.schedulerize table tbody .time-row.first td:first-child {
+.schedulerize table tbody .schedulerize-time-row.schedulerize-first td:first-child {
   border-top: none;
 }
-.schedulerize table tbody .time-row.first td.time-header {
+.schedulerize table tbody .schedulerize-time-row.schedulerize-first td.schedulerize-time-header {
   padding-left: 0;
   vertical-align: top;
 }
-.schedulerize table tbody .time-row.first td.time-header .time-text {
+.schedulerize table tbody .schedulerize-time-row.schedulerize-first td.schedulerize-time-header .schedulerize-time-text {
   margin-top: -10px;
   text-align: right;
   padding-right: 15px;
 }
-.schedulerize table tbody .time-row td {
+.schedulerize table tbody .schedulerize-time-row td {
   padding: 1px 10px 0px 10px;
 }
-.schedulerize table tbody .time-row td .event {
+.schedulerize table tbody .schedulerize-time-row td .schedulerize-event {
   background-color: #ccc;
   height: 30px;
   overflow: auto;
   word-wrap: break-word;
   cursor: pointer;
 }
-.schedulerize table tbody .time-row td .event.continuation {
+.schedulerize table tbody .schedulerize-time-row td .schedulerize-event.schedulerize-continuation {
   height: 100%;
 }
-.schedulerize table tbody .time-row td .event.blank.free {
+.schedulerize table tbody .schedulerize-time-row td .schedulerize-event.schedulerize-blank.schedulerize-free {
   background-color: transparent;
   border-top: none;
   cursor: default;
 }
-.schedulerize table tbody .time-row td .event.blank:before {
+.schedulerize table tbody .schedulerize-time-row td .schedulerize-event.schedulerize-blank:before {
   content: '\00a0';
 }
