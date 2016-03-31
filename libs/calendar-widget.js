@@ -94,7 +94,7 @@
             //prepare container
             var columnHeaderList = $("<tr>", {"class": "schedulerize-column-header-list"});
             //first column which is a blank
-            columnHeaderList.append($("<th>", {"class": "schedulerize-column-header blank"}));
+            columnHeaderList.append($("<th>", {"class": "schedulerize-column-header schedulerize-blank"}));
                 
             //add rest of the column headers
             $.each(options.Data.Verticals, function(index, value){
