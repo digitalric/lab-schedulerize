@@ -7,7 +7,9 @@ angular.module('app', ['schedulerize'])
                     Block: 30
                 } 
         };
-        
+
+        moment.locale("en-AU");
+
         var today = moment().startOf('day');
         
         $scope.data = {
@@ -44,9 +46,9 @@ angular.module('app', ['schedulerize'])
                         {
                             Id: "event3",
                             Title: "Availability 1",
-                            Start: moment(today).hour(9).toDate(),
+                            Start: moment(today).hour(6).toDate(),
                             StartTime: "09:00",
-                            End: moment(today).hour(11).toDate(),
+                            End: moment(today).hour(23).toDate(),
                             EndTime: "11:00",
                             Content: "%(Title)s <br/> %(StartTime)s - %(EndTime)s",
                             Class: "availability"    
