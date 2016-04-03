@@ -5,7 +5,9 @@
                 TimeRange: {
                     Start: 9, //09 00 or 9am
                     End: 18, //18 00 or 6pm
-                    Block: 10
+                    Block: 10,
+                    _scheduleStart: {},
+                    _scheduleEnd: {}
                 },
             },
             Data: {
@@ -23,7 +25,14 @@
             if (event) {
                 
                 var eventStart = moment(event._Start);
+                if (eventStart.isBefore(this.options.Settings.TimeRange._scheduleStart)) {
+                    eventStart = moment(this.options.Settings.TimeRange._scheduleStart);
+                }
+                
                 var eventEnd = moment(event._End);
+                if (eventEnd.isAfter(this.options.Settings.TimeRange._scheduleEnd)) {
+                    eventEnd = moment(this.options.Settings.TimeRange._scheduleEnd);
+                }
                 
                 //if this block is the start of an event
                 if (timeOfTheDay.isSame(eventStart)) {
@@ -110,8 +119,12 @@
 
             //compute start of the schedule
             var startOfSchedule = moment(startOfDay).add(options.Settings.TimeRange.Start, "hours");
+            options.Settings.TimeRange._scheduleStart = startOfSchedule;
+            
             //compute end of the schedule, i.e. 1 hour after set end time
             var endOfSchedule = moment(startOfDay).add(options.Settings.TimeRange.End + 1, "hours");
+            options.Settings.TimeRange._scheduleEnd = endOfSchedule;
+            
             //initialization for the loop
             var scheduleRun = moment(startOfSchedule);
             
